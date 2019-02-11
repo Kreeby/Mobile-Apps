@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_transportpay"
+        android:icon="@drawable/transportpay_icon"
+        android:title="@string/nav_transportpay" />
+    <item
+        android:id="@+id/nav_tickets"
+        android:icon="@drawable/tickets_logo"
+        android:title="@string/nav_tickets" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_logo"
+        android:title="@string/nav_profile" />
+</menu>

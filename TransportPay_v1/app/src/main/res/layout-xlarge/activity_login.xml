@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/background_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.15"
+        android:scaleType="centerCrop"
+        android:paddingLeft="600dp"
+        android:src="@drawable/transportpay_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="113.2dp"
+        android:layout_height="113.2dp"
+        android:src="@drawable/transportpay_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <TextView
+        android:id="@+id/transportpay_textname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/comfortaa_regular"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/transportpay_name"
+        android:textColor="@color/textColor"
+        android:textSize="16.1sp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331"/>
+
+
+    <Spinner
+        android:id="@+id/spinner_countries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:spinnerMode="dropdown"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="284dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"/>
+
+
+    <TextView
+        android:id="@+id/country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="#ffffff"
+        android:textSize="13.8sp"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="342dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5982"
+        app:layout_constraintHorizontal_bias="0.304"/>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textSize="13.8sp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="326dp"
+        android:background="#00000000"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5975"
+        app:layout_constraintHorizontal_bias="0.554"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="239.2dp"
+        android:layout_height="1.15dp"
+        android:background="@color/textColor"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="367dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619"/>
+
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="251.85dp"
+        android:layout_height="40.25dp"
+        android:background="@drawable/mybutton"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="251.85dp"
+        android:layout_height="23dp"
+        android:layout_alignEnd="@+id/transportpay_textname"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mybutton_invisible"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="17.25sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="422dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765"/>
+
+
+    <ImageView
+        android:id="@+id/grad"
+        android:layout_width="match_parent"
+        android:layout_height="116.15dp"
+        android:alpha="0.67"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="14.95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/grad"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/how_it_works"
+        android:textColor="#761399"
+        android:textSize="13.8sp"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="551dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9509"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="13.2dp"
+        android:layout_height="6.9dp"
+        android:src="@drawable/arrow_down"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="596dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"/>
+
+</android.support.constraint.ConstraintLayout>

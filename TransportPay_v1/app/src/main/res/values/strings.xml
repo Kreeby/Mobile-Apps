@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="how_it_works">How It Works</string>
+    <string name="transportpay_name">Transportpay</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_transportpay">Transportpay</string>
+
+    <string name="nav_tickets">Tickets</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

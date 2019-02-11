@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketsFragment"
+    android:background="#f3f6f9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="34.56dp"
+            android:layout_marginLeft="34.56dp"
+            android:layout_marginTop="100.8dp"
+            android:layout_marginBottom="100.8dp">
+
+
+            <!-- 1 BUTTON -->
+
+            <RelativeLayout
+                android:id="@+id/closeForm"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:background="@drawable/button_list"
+                android:onClick="onClick">
+
+                <TextView
+                    android:id="@+id/text_b_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="38.4dp"
+                    android:layout_marginLeft="35.52dp"
+                    android:elevation="3.84dp"
+                    android:text="Bus 123"
+                    android:textColor="#525354"
+                    android:textSize="24.96sp"
+                    android:fontFamily="@font/lato_semibold"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_b_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35.52dp"
+                    android:layout_marginTop="42.24dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/arrow_list" />
+
+
+
+                <TextView
+                    android:id="@+id/text_b_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_b_1"
+                    android:layout_marginTop="86.4dp"
+                    android:layout_marginBottom="19.2dp"
+                    android:text="12/03/2017"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_b_2"
+                    android:layout_marginLeft="205.44dp"
+                    android:text="14:33"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_b_1"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="83.52dp"
+                    android:text="$0.30"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+            </RelativeLayout>
+
+
+
+            <!-- 1 BUTTON OPEN FORM -->
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForOpenForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="28.8dp"
+                android:visibility="gone"
+                android:background="@drawable/ticket_form">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/openForm"
+                    android:layout_height="72dp"
+                    android:background="@drawable/gradient_tickets"
+                    android:onClick="onClick">
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="20.76dp"
+                        android:layout_marginLeft="40.32dp"
+                        android:elevation="3.84dp"
+                        android:text="Bus 123"
+                        android:textColor="#fefefe"
+                        android:textSize="23.04sp"
+                        android:fontFamily="@font/lato_medium"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30.72dp"
+                        android:layout_marginRight="33.6dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:src="@drawable/arrow_down_white" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.vipulasri.ticketview.TicketView
+                            android:id="@+id/ticketView"
+                            android:layout_width="match_parent"
+                            android:layout_height="278.4dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:ticketBackgroundColor="#FFFFFF"
+                            app:ticketDividerColor="#16191c"
+                            app:ticketDividerDashGap="7.68dp"
+                            app:ticketDividerDashLength="5.76dp"
+                            app:ticketDividerPadding="2.88dp"
+                            app:ticketDividerType="dash"
+                            app:ticketDividerWidth="0.96dp"
+                            app:ticketOrientation="horizontal"
+                            app:ticketScallopPositionPercent="25.7"
+                            app:ticketScallopRadius="13.44dp"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true">
+
+
+                        </com.vipulasri.ticketview.TicketView>
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="39.36dp"
+                            android:layout_marginTop="23.76dp"
+                            android:elevation="3.84dp"
+                            android:text="12/03/2017"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"
+                            />
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/ticketView"
+                            android:layout_alignRight="@+id/ticketView"
+                            android:layout_marginBottom="23.04dp"
+                            android:layout_marginRight="24.48dp"
+                            android:layout_marginTop="22.32dp"
+                            android:elevation="2dp"
+                            android:text="$0.30"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/bar_code"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:scaleX="1.1"
+                            android:scaleY="1.1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="67.2dp"
+                            android:layout_marginLeft="59.52dp"
+                            android:layout_marginRight="59.52dp"
+                            android:layout_marginTop="109.44dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/barcode_img" />
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="215.48dp"
+                            android:text="Ticket will expire at 12:41"
+                            android:textColor="#7e8386"
+                            android:textSize="15.84sp"
+                            android:fontFamily="@font/lato_medium"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- 1 BUTTON  -->
+
+
+            <!-- 2 BUTTON -->
+
+            <RelativeLayout
+                android:id="@+id/closeForm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="61.44dp"
+                android:background="@drawable/button_list"
+                android:onClick="onClick">
+
+                <TextView
+                    android:id="@+id/text_b_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="38.4dp"
+                    android:layout_marginLeft="35.52dp"
+                    android:elevation="3.84dp"
+                    android:text="Bus 79"
+                    android:textColor="#525354"
+                    android:textSize="24.96sp"
+                    android:fontFamily="@font/lato_semibold"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_b_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35.52dp"
+                    android:layout_marginTop="42.24dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/arrow_list" />
+
+
+                <TextView
+                    android:id="@+id/text_b_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_b_5"
+                    android:layout_marginTop="86.4dp"
+                    android:layout_marginBottom="19.2dp"
+                    android:text="11/03/2017"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+                <TextView
+                    android:id="@+id/text_b_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_b_6"
+                    android:layout_marginLeft="205.44dp"
+                    android:text="14:33"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+                <TextView
+                    android:id="@+id/text_b_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignRight="@+id/img_b_2"
+                    android:layout_marginTop="83.52dp"
+                    android:text="$0.30"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+            </RelativeLayout>
+
+
+            <!-- 2 BUTTON OPEN FORM -->
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForOpenForm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="28.8dp"
+                android:visibility="gone"
+                android:background="@drawable/ticket_form">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/openForm2"
+                    android:layout_height="72dp"
+                    android:background="@drawable/gradient_tickets"
+                    android:onClick="onClick">
+
+                    <TextView
+                        android:id="@+id/text_w_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="20.76dp"
+                        android:layout_marginLeft="40.32dp"
+                        android:elevation="3.84dp"
+                        android:text="Bus 79"
+                        android:textColor="#fefefe"
+                        android:textSize="23.04sp"
+                        android:fontFamily="@font/lato_medium"/>
+
+                    <ImageView
+                        android:id="@+id/img_w_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30.72dp"
+                        android:layout_marginRight="33.6dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:src="@drawable/arrow_down_white" />
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.vipulasri.ticketview.TicketView
+
+                            android:id="@+id/ticketView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="278.4dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:ticketBackgroundColor="#FFFFFF"
+                            app:ticketDividerColor="#16191c"
+                            app:ticketDividerDashGap="7.68dp"
+                            app:ticketDividerDashLength="5.76dp"
+                            app:ticketDividerPadding="2.88dp"
+                            app:ticketDividerType="dash"
+                            app:ticketDividerWidth="0.96dp"
+                            app:ticketOrientation="horizontal"
+                            app:ticketScallopPositionPercent="25.7"
+                            app:ticketScallopRadius="13.44dp"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true">
+
+
+                        </com.vipulasri.ticketview.TicketView>
+
+                        <TextView
+                            android:id="@+id/txt_w_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="39.36dp"
+                            android:layout_marginTop="23.76dp"
+                            android:elevation="3.84dp"
+                            android:text="11/03/2017"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+                        <TextView
+                            android:id="@+id/txt_w_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="23.04dp"
+                            android:layout_marginRight="24.48dp"
+                            android:layout_marginTop="22.32dp"
+                            android:elevation="2dp"
+                            android:text="$0.30"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:layout_alignRight="@+id/ticketView1"
+                            android:layout_alignEnd="@+id/ticketView1"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+                        <ImageView
+                            android:id="@+id/bar_code1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:scaleX="1.1"
+                            android:scaleY="1.1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="67.2dp"
+                            android:layout_marginLeft="59.52dp"
+                            android:layout_marginRight="59.52dp"
+                            android:layout_marginTop="109.44dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/barcode_img" />
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="215.48dp"
+                            android:text="Ticket will expire at 12:41"
+                            android:textColor="#7e8386"
+                            android:textSize="15.84sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <!-- 2 BUTTON -->
+
+
+
+
+
+
+            <!-- 3 BUTTON -->
+
+
+            <RelativeLayout
+                android:id="@+id/closeForm3"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_marginTop="61.44dp"
+                android:background="@drawable/button_list"
+                android:onClick="onClick">
+
+                <TextView
+                    android:id="@+id/text_b_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="38.4dp"
+                    android:layout_marginLeft="35.52dp"
+                    android:elevation="3.84dp"
+                    android:text="Trum 1"
+                    android:textColor="#525354"
+                    android:textSize="24.96sp"
+                    android:fontFamily="@font/lato_semibold"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_b_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35.52dp"
+                    android:layout_marginTop="42.24dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/arrow_list" />
+
+
+
+                <TextView
+                    android:id="@+id/text_b_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_b_9"
+                    android:layout_marginTop="86.4dp"
+                    android:layout_marginBottom="19.2dp"
+                    android:text="11/03/2017"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_b_10"
+                    android:layout_marginLeft="205.44dp"
+                    android:text="14:33"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_b_3"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="83.52dp"
+                    android:text="$0.25"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+            </RelativeLayout>
+
+
+
+            <!-- 3 BUTTON OPEN FORM -->
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForOpenForm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="28.8dp"
+                android:layout_marginTop="61.44dp"
+                android:visibility="gone"
+                android:background="@drawable/ticket_form"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/openForm3"
+                    android:layout_height="72dp"
+                    android:background="@drawable/gradient_tickets"
+                    android:onClick="onClick">
+
+                    <TextView
+                        android:id="@+id/text_w_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="20.76dp"
+                        android:layout_marginLeft="40.32dp"
+                        android:elevation="3.84dp"
+                        android:text="Trum 1"
+                        android:textColor="#fefefe"
+                        android:textSize="23.04sp"
+                        android:fontFamily="@font/lato_medium"/>
+
+
+                    <ImageView
+                        android:id="@+id/img_w_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30.72dp"
+                        android:layout_marginRight="33.6dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:src="@drawable/arrow_down_white" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.vipulasri.ticketview.TicketView
+
+                            android:id="@+id/ticketView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="278.4dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:ticketBackgroundColor="#FFFFFF"
+                            app:ticketDividerColor="#16191c"
+                            app:ticketDividerDashGap="7.68dp"
+                            app:ticketDividerDashLength="5.76dp"
+                            app:ticketDividerPadding="2.88dp"
+                            app:ticketDividerType="dash"
+                            app:ticketDividerWidth="0.96dp"
+                            app:ticketOrientation="horizontal"
+                            app:ticketScallopPositionPercent="25.7"
+                            app:ticketScallopRadius="13.44dp"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true">
+
+
+                        </com.vipulasri.ticketview.TicketView>
+
+                        <TextView
+                            android:id="@+id/txt_w_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="39.36dp"
+                            android:layout_marginTop="23.76dp"
+                            android:elevation="3.84dp"
+                            android:text="11/03/2017"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_w_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="23.04dp"
+                            android:layout_marginRight="24.48dp"
+                            android:layout_marginTop="22.32dp"
+                            android:elevation="2dp"
+                            android:text="$0.25"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:layout_alignRight="@+id/ticketView2"
+                            android:layout_alignEnd="@+id/ticketView2"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/bar_code2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:scaleX="1.1"
+                            android:scaleY="1.1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="67.2dp"
+                            android:layout_marginLeft="59.52dp"
+                            android:layout_marginRight="59.52dp"
+                            android:layout_marginTop="109.44dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/barcode_img" />
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="215.48dp"
+                            android:text="Ticket will expire at 12:41"
+                            android:textColor="#7e8386"
+                            android:textSize="15.84sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- 3 BUTTON -->
+
+
+
+
+            <!-- 4 BUTTON -->
+
+            <RelativeLayout
+                android:id="@+id/closeForm4"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_marginTop="61.44dp"
+                android:background="@drawable/button_list"
+                android:onClick="onClick">
+
+                <TextView
+                    android:id="@+id/text_b_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="38.4dp"
+                    android:layout_marginLeft="35.52dp"
+                    android:elevation="3.84dp"
+                    android:text="Trolleybus 33"
+                    android:textColor="#525354"
+                    android:textSize="24.96sp"
+                    android:fontFamily="@font/lato_semibold"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_b_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35.52dp"
+                    android:layout_marginTop="42.24dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/arrow_list" />
+
+
+
+                <TextView
+                    android:id="@+id/text_b_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_b_13"
+                    android:layout_marginTop="86.4dp"
+                    android:layout_marginBottom="19.2dp"
+                    android:text="10/03/2017"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_b_14"
+                    android:layout_marginLeft="205.44dp"
+                    android:text="12:06"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_b_4"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="83.52dp"
+                    android:text="$0.30"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+            </RelativeLayout>
+
+
+
+            <!-- 4 BUTTON OPENED FORM -->
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForOpenForm4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="28.8dp"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                android:background="@drawable/ticket_form"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/openForm4"
+                    android:layout_height="72dp"
+                    android:background="@drawable/gradient_tickets"
+                    android:onClick="onClick">
+
+                    <TextView
+                        android:id="@+id/text_w_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="20.76dp"
+                        android:layout_marginLeft="40.32dp"
+                        android:elevation="3.84dp"
+                        android:text="Trolleybus 33"
+                        android:textColor="#fefefe"
+                        android:textSize="23.04sp"
+                        android:fontFamily="@font/lato_medium"/>
+
+                    <ImageView
+                        android:id="@+id/img_w_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30.72dp"
+                        android:layout_marginRight="33.6dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:src="@drawable/arrow_down_white" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.vipulasri.ticketview.TicketView
+
+                            android:id="@+id/ticketView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="278.4dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:ticketBackgroundColor="#FFFFFF"
+                            app:ticketDividerColor="#16191c"
+                            app:ticketDividerDashGap="7.68dp"
+                            app:ticketDividerDashLength="5.76dp"
+                            app:ticketDividerPadding="2.88dp"
+                            app:ticketDividerType="dash"
+                            app:ticketDividerWidth="0.96dp"
+                            app:ticketOrientation="horizontal"
+                            app:ticketScallopPositionPercent="25.7"
+                            app:ticketScallopRadius="13.44dp"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true">
+
+
+                        </com.vipulasri.ticketview.TicketView>
+
+                        <TextView
+                            android:id="@+id/txt_w_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="39.36dp"
+                            android:layout_marginTop="23.76dp"
+                            android:elevation="3.84dp"
+                            android:text="10/03/2017"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_w_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="23.04dp"
+                            android:layout_marginRight="24.48dp"
+                            android:layout_marginTop="22.32dp"
+                            android:elevation="2dp"
+                            android:text="$0.30"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:layout_alignRight="@+id/ticketView3"
+                            android:layout_alignEnd="@+id/ticketView3"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/bar_code3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:scaleX="1.1"
+                            android:scaleY="1.1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="67.2dp"
+                            android:layout_marginLeft="59.52dp"
+                            android:layout_marginRight="59.52dp"
+                            android:layout_marginTop="109.44dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/barcode_img" />
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="215.48dp"
+                            android:text="Ticket will expire at 12:41"
+                            android:textColor="#7e8386"
+                            android:textSize="15.84sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- 4 BUTTON -->
+
+
+            <!-- 5 BUTTON -->
+
+            <RelativeLayout
+                android:id="@+id/closeForm5"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_marginTop="61.44dp"
+                android:layout_marginBottom="135.36dp"
+                android:background="@drawable/button_list"
+                android:onClick="onClick">
+
+                <TextView
+                    android:id="@+id/text_b_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="38.4dp"
+                    android:layout_marginLeft="35.52dp"
+                    android:elevation="2dp"
+                    android:text="Bus 12"
+                    android:textColor="#525354"
+                    android:textSize="24.96sp"
+                    android:fontFamily="@font/lato_semibold" />
+
+                <ImageView
+                    android:id="@+id/img_b_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35.52dp"
+                    android:layout_marginTop="42.24dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/arrow_list" />
+
+
+
+                <TextView
+                    android:id="@+id/text_b_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_b_17"
+                    android:layout_marginTop="86.4dp"
+                    android:layout_marginBottom="19.2dp"
+                    android:text="09/03/2017"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_b_18"
+                    android:layout_marginLeft="205.44dp"
+                    android:text="8:12"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+                <TextView
+                    android:id="@+id/text_b_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_b_5"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="83.52dp"
+                    android:text="$0.30"
+                    android:textColor="#a4158a"
+                    android:textSize="23.04sp"
+                    android:fontFamily="@font/lato_medium"/>
+
+
+            </RelativeLayout>
+
+
+
+            <!-- 5 BUTTON OPEN FORMED -->
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForOpenForm5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="28.8dp"
+                android:layout_marginBottom="135.36dp"
+                android:layout_marginTop="61.44dp"
+                android:visibility="gone"
+                android:background="@drawable/ticket_form">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/openForm5"
+                    android:layout_height="72dp"
+                    android:background="@drawable/gradient_tickets"
+                    android:onClick="onClick">
+
+                    <TextView
+                        android:id="@+id/text_w_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="20.76dp"
+                        android:layout_marginLeft="40.32dp"
+                        android:elevation="3.84dp"
+                        android:text="Bus 12"
+                        android:textColor="#fefefe"
+                        android:textSize="23.04sp"
+                        android:fontFamily="@font/lato_medium"/>
+
+                    <ImageView
+                        android:id="@+id/img_w_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30.72dp"
+                        android:layout_marginRight="33.6dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:src="@drawable/arrow_down_white" />
+
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.vipulasri.ticketview.TicketView
+
+                            android:id="@+id/ticketView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="278.4dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:ticketBackgroundColor="#FFFFFF"
+                            app:ticketDividerColor="#16191c"
+                            app:ticketDividerDashGap="7.68dp"
+                            app:ticketDividerDashLength="5.76dp"
+                            app:ticketDividerPadding="2.88dp"
+                            app:ticketDividerType="dash"
+                            app:ticketDividerWidth="0.96dp"
+                            app:ticketOrientation="horizontal"
+                            app:ticketScallopPositionPercent="25.7"
+                            app:ticketScallopRadius="13.44dp"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true">
+
+
+                        </com.vipulasri.ticketview.TicketView>
+
+                        <TextView
+                            android:id="@+id/txt_w_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="39.36dp"
+                            android:layout_marginTop="23.76dp"
+                            android:elevation="3.84dp"
+                            android:text="09/03/2017"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_w_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="23.04dp"
+                            android:layout_marginRight="24.48dp"
+                            android:layout_marginTop="22.32dp"
+                            android:elevation="2dp"
+                            android:text="$0.30"
+                            android:textColor="#a4158a"
+                            android:textSize="19.2sp"
+                            android:layout_alignRight="@+id/ticketView4"
+                            android:layout_alignEnd="@+id/ticketView4"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/bar_code4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:scaleX="1.1"
+                            android:scaleY="1.1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="67.2dp"
+                            android:layout_marginLeft="59.52dp"
+                            android:layout_marginRight="59.52dp"
+                            android:layout_marginTop="109.44dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/barcode_img" />
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="215.48dp"
+                            android:text="Ticket will expire at 12:41"
+                            android:textColor="#7e8386"
+                            android:textSize="15.84sp"
+                            android:fontFamily="@font/lato_medium"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <!-- 5 BUTTON -->
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
